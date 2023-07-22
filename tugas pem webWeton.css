@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(103, 24, 57);
+}
+#pbcekprimbon {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    text-align:center;
+    border-style: dotted;
+    border-radius: 5px;
+    background-color: rgb(56, 156, 186);
+  }
+  #pbhasil {
+    font-family:'Times New Roman', Times, serif;
+    font-size:larger;
+    font-style: bold;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: rgb(193, 128, 54);
+  }
+  .pbh2,
+  pbh3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+    padding: 0px;
+  }
+  .pbh3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: medium;
+    
+  }
+  #pbhitung {
+    padding: 10px;
+  }
+ 

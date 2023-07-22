@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="UasDaswebWeton.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Krisna Fahrizal Dzatama/2113030079</title>
+
+</head>
+<body>
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+          Hai disini saya akan menghitung weton dari kalian
+        </span>
+      </nav>
+           
+    <div id="pbcekprimbon" >
+        <h2 textclass="pbh2" align="center">Hitung Weton</h2>
+        <h3 class="pbh3" align="center">Tanggal Lahir </h3>
+        <input id="pbtanggal" size="7" placeholder="tanggal" style="text-align: center;">
+        <select id="pbbulan">
+          <option selected="" value="0" >Januari</option>
+          <option value="1">Februari</option>
+          <option value="2">Maret</option>
+          <option value="3">April</option>
+          <option value="4">Mei</option>
+          <option value="5">Juni</option>
+          <option value="6">Juli</option>
+          <option value="7">Agustus</option>
+          <option value="8">September</option>
+          <option value="9">Oktober</option>
+          <option value="10">Nopember</option>
+          <option value="11">Desember</option></select>
+          <input id="pbtahun" size="7" placeholder="tahun" style="text-align: center;"></td><br>
+          <br>
+          <button id="pbhitung" type="button" class="btn btn-outline-success" style="width: 500px;">Hitung</button>
+          </button>
+          <div id="pbhasil">
+          </div>
+        </div>
+          </div>
+        </div>
+    </body>
+    </html>
+    <script type="text/javascript">
+        //var __nama = document.getElementById("pbnama");
+    var __tanggal = document.getElementById("pbtanggal");
+    var __bulan = document.getElementById("pbbulan");
+    var __tahun = document.getElementById("pbtahun");
+    var __hasil = document.getElementById("pbhasil");
+    var bthasil = document.getElementById("pbhitung");
+    
+    bthasil.addEventListener("click", function() {
+      var tanggalLahir = new Date(__tahun.value, __bulan.selectedIndex, __tanggal.value);
+      __hasil.innerHTML = "Weton Kamu " + hitunghari(tanggalLahir) + " " + hitungpasaran(tanggalLahir);
+    });
+    
+    function hitunghari(_tanggal) {
+      _hari = _tanggal.getDay();
+      switch(_hari) {
+    case 0:
+      return "Minggu";
+    case 1:
+      return "Senin";
+    case 2:
+      return "Selasa";
+    case 3:
+      return "Rabu";
+    case 4:
+      return "Kamis";
+    case 5:
+      return "Jum'at";
+    case 6:
+      return "Sabtu";
+    default:
+      return "";
+  }
+} 
+function hitungpasaran(_tanggal) {
+  var awal = new Date(70,0,2);
+  pembagian = ((_tanggal.getTime()-awal.getTime())+86400000)/432000000;
+  sisa = Math.round((pembagian-Math.floor(pembagian))*10)/2;
+ 
+  switch (sisa) {
+    case 0:
+      return "Pon";
+    case 1:
+      return "Kliwon";
+    case 2:
+      return "Legi";
+    case 3:
+      return "Pahing";
+    case 4:
+      return "Wage";
+    default:
+      return "";
+  }
+}
+</script>    
